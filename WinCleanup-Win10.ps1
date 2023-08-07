@@ -9,6 +9,7 @@ $AppsList = @(
     "*Microsoft.Windows.ParentalControls*"       # Parental Controls
 
     "*Microsoft.BingNews*"                       # Bing
+    "*Microsoft.News*"
     "*Microsoft.BingWeather*"
     "*Microsoft.WindowsMaps*"
 
@@ -29,8 +30,11 @@ $AppsList = @(
 
     "*Microsoft.MicrosoftOfficeHub*"             # Office
     "*Microsoft.Office.OneNote*"
+    "*Microsoft.Office.Lens*"
     "*Microsoft.Office.Sway*"
     "*Microsoft.MicrosoftStickyNotes*"
+    "*Microsoft.Whiteboard*"
+    "*Microsoft.Office.Todo.List*"
 
     "*Microsoft.SkypeApp*"                       # Skype
 
@@ -81,17 +85,28 @@ $AppsList = @(
     "*Duolingo-LearnLanguagesforFree*"
     "*PandoraMediaInc*"
     "*CandyCrush*"
+    "*BubbleWitch3Saga*"
     "*Wunderlist*"
     "*Flipboard*"
     "*Twitter*"
     "*Facebook*"
     "*Spotify*"
+    "*Minecraft*"
+    "*Royal Revolt*"
+    "*Sway*"
+    "*Speed Test*"
+    "*Dolby*"
+
     )
 
 
 
 foreach ($App in $AppsList) {
+    Write-Output "Trying to remove $App."
+
     Get-AppxPackage -Name $App | Remove-AppxPackage
     Get-AppxProvisionedPackage -Online | Where-Object DisplayName -like $App | Remove-AppxProvisionedPackage -Online
 }
+
+
 
