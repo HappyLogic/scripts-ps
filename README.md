@@ -9,7 +9,7 @@ This repository is dedicated for useful PowerShell Scripts, for sharing with eve
 
 For executing any script, ***PS*** must be allowed to do so by setting the execution policy. Details can be taken from Microsoft documentation, but for our current purpose we will set the execution policy as follows:
 
-### Checking the current execution policy
+### Checking the execution policy
 
 The command *Get-ExecutionPolicy -list* can be used for checking the currently set execution policy at all the levels of policy.
 
@@ -29,9 +29,9 @@ PS C:\Windows\system32>
 ```
 
 
-### Changing the current policy to "Unrestricted"
+### Updating policy to "Unrestricted"
 
-In order to execute the script, use:
+In order to execute any script, use:
 
 ```powershell
 PS C:\Windows\system32> Set-ExecutionPolicy -ExecutionPolicy Unrestricted
@@ -39,7 +39,7 @@ PS C:\Windows\system32> Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
 
 
-### Changing the current policy back to "Undefined"
+### Changing policy back to "Undefined"
 
 After executing the script, revert back the old, default policy:
 
