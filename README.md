@@ -5,9 +5,16 @@ This repository is dedicated for useful PowerShell Scripts, for sharing with eve
 > Mostly system-wide scripts require Administrative rights to execute, in such a case, start PowerShell as *Administrator*
 
 
+&nbsp;
+
+&nbsp;
+
 ## Execution Policy
 
 For executing any script, ***PS*** must be allowed to do so by setting the execution policy. Details can be taken from Microsoft documentation, but for our current purpose we will set the execution policy as follows:
+
+
+&nbsp;
 
 ### Checking the execution policy
 
@@ -29,6 +36,8 @@ PS C:\Windows\system32>
 ```
 
 
+&nbsp;
+
 ### Updating policy to "Unrestricted"
 
 In order to execute any script, use:
@@ -38,6 +47,7 @@ PS C:\Windows\system32> Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 ```
 
 
+&nbsp;
 
 ### Changing policy back to "Undefined"
 
@@ -48,6 +58,9 @@ PS C:\Windows\system32> Set-ExecutionPolicy -ExecutionPolicy Undefined
 ```
 
 
+&nbsp;
+
+&nbsp;
 
 ## Executing the Script
 
