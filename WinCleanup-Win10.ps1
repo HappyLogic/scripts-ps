@@ -1,4 +1,4 @@
-﻿
+
 Import-Module AppX
 Import-Module Dism
 
@@ -14,15 +14,18 @@ $AppsList = @(
 
     #"*Microsoft.MicrosoftEdge*"                  # Edge
     #"*Microsoft.MicrosoftEdgeDevToolsClient*"
+    #"*Microsoft.MicrosoftEdge.Stable*"
     
     "*Microsoft.GetHelp*"                        # Help
     "*Microsoft.Getstarted*"
     "*Microsoft.WindowsFeedbackHub*"
 
     #"*Microsoft.Windows.CapturePicker*"          # Snipping Tool
+    #"*Microsoft.ScreenSketch*"
         
     "*Microsoft.Microsoft3DViewer*"              # 3D
     "*Microsoft.Print3D*"
+    "*Microsoft.MixedReality.Portal*"
 
     "*Microsoft.MicrosoftOfficeHub*"             # Office
     "*Microsoft.Office.OneNote*"
@@ -31,11 +34,12 @@ $AppsList = @(
 
     "*Microsoft.SkypeApp*"                       # Skype
 
-    "*Microsoft.MicrosoftSolitaireCollection*"   # Games
+    "*Microsoft.MicrosoftSolitaireCollection*"   # Gaming
     "*Microsoft.XboxGameCallableUI*"
     "*Microsoft.Xbox.TCUI*"
     "*Microsoft.XboxApp*"
     "*Microsoft.XboxGameOverlay*"
+    "*Microsoft.XboxGamingOverlay*"
     "*Microsoft.XboxIdentityProvider*"
     "*Microsoft.XboxSpeechToTextOverlay*"
     
@@ -46,27 +50,30 @@ $AppsList = @(
     "*Microsoft.RemoteDesktop*"
     "*microsoft.windowscommunicationsapps*"
     "*Microsoft.Messaging*"
+    "*Microsoft.YourPhone*"
 
     "*Microsoft.People*"                         # People
     "*Microsoft.Windows.PeopleExperienceHost*"
 
     "*Microsoft.Windows.NarratorQuickStart*"     # Narration
     
-    "*Microsoft.StorePurchaseApp*"
+    "*Microsoft.ZuneMusic*"                      # Playback
+    "*Microsoft.ZuneVideo*"
+
+    "*Microsoft.Advertising.Xaml*"               # Advertising
+    "*Microsoft.Advertising.Xaml_10.1811.1.0_x86__8wekyb3d8bbwe*"
+    "*Microsoft.Advertising.Xaml_10.1811.1.0_x64__8wekyb3d8bbwe*"
+    
+    "*Microsoft.StorePurchaseApp*"               # Other tools
     "*Microsoft.WindowsAlarms*"
     "*Microsoft.WindowsCamera*"
     "*Microsoft.WindowsSoundRecorder*"
-
-    #"*Microsoft.ZuneMusic*"                      # Playback
-    #"*Microsoft.ZuneVideo*"
-
-    "*Microsoft.Advertising.Xaml_10.1712.5.0_x64__8wekyb3d8bbwe*"
-    "*Microsoft.Advertising.Xaml_10.1712.5.0_x86__8wekyb3d8bbwe*"
-    
     #"*Microsoft.MSPaint*"
     #"*Microsoft.Windows.Photos*"
     #"*Microsoft.WindowsCalculator*"
     #"*Microsoft.WindowsStore*"
+    #"*Microsoft.Windows.Search*"
+    "*Microsoft.Wallet*"
 
     "*EclipseManager*"                           # Auto-installed Others
     "*ActiproSoftwareLLC*"
@@ -87,6 +94,4 @@ foreach ($App in $AppsList) {
     Get-AppxPackage -Name $App | Remove-AppxPackage
     Get-AppxProvisionedPackage -Online | Where-Object DisplayName -like $App | Remove-AppxProvisionedPackage -Online
 }
-
-
 
