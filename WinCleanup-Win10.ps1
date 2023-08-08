@@ -61,8 +61,8 @@ $AppsList = @(
 
     "*Microsoft.Windows.NarratorQuickStart*"     # Narration
     
-    "*Microsoft.ZuneMusic*"                      # Playback
-    "*Microsoft.ZuneVideo*"
+    #"*Microsoft.ZuneMusic*"                      # Playback
+    #"*Microsoft.ZuneVideo*"
 
     "*Microsoft.Advertising.Xaml*"               # Advertising
     "*Microsoft.Advertising.Xaml_10.1811.1.0_x86__8wekyb3d8bbwe*"
