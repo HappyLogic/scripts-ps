@@ -4,7 +4,6 @@ Import-Module Dism
 
 
 $AppsList = @(
-    
     "*Microsoft.549981C3F5F10*"                  # Cortana
     "*Microsoft.Windows.ParentalControls*"       # Parental Controls
 
@@ -96,7 +95,6 @@ $AppsList = @(
     "*Sway*"
     "*Speed Test*"
     "*Dolby*"
-
     )
 
 
